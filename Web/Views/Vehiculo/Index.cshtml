@@ -1,0 +1,29 @@
+﻿@model VehiculoViewModel
+@{
+    ViewData["Title"] = "Vehi";
+    string helloWorldMsg = "Hello, world!";
+}
+
+<h1>@helloWorldMsg</h1>
+<h2>@Model.MensajeVehiculo</h2>
+
+<table class="table">
+    
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Placa</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var vehiculo in Model.ListVehiculos)
+            {
+            <tr>
+                <th>@vehiculo.Id</th>
+                <th>@vehiculo.Marca</th>
+                <th>@vehiculo.Placa</th>
+        </tr>
+            }
+    </tbody>
+</table>
